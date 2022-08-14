@@ -1,0 +1,6 @@
+//GLOBAL ACTION
+export const SET_SCREEN_SIZE = 'SET_SCREEN_SIZE';
+export const SET_IS_LOADING = 'SET_IS_LOADING';
+
+//USER
+export const SET_IS_LOGIN = 'SET_IS_LOGIN';

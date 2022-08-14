@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled.button`
   cursor: pointer;
+  border: none;
+  margin-bottom: 20px;
   ${(props) => {
     if (props.title === 'Sign in with google') {
       return `
@@ -22,16 +24,15 @@ export const ButtonWrapper = styled.div`
         `;
     } else {
       return `    
-        background-color: #355bc0;
+        background-color: #FF9D3B;
         height: 45px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 2px;
-        margin-bottom: 25px;
         :hover{
-            background-color: #214DC2
+            background-color: #FC8E20
         }
 `;
     }
@@ -53,5 +54,16 @@ export const ButtonTitle = styled.span`
 `;
 
 export const Icon = styled.img`
-  height: 80%;
+  ${(props) => {
+    if (props.name === 'default') {
+      return `
+        height: 50%;    
+        margin-left:20px;
+    `;
+    } else {
+      return `
+        height: 80%; 
+      `;
+    }
+  }}
 `;

@@ -9,23 +9,21 @@ import styled from 'styled-components';
 export const InputTexts = styled.input`
   color: gray;
   font-size: 0.8rem;
-  width: 95%;
+  max-width: 100%;
   border-radius: 2px;
   border: none;
   border-width: 1px;
   border-style: solid;
-  border-color: #E4E4E4;
+  border-color: #e4e4e4;
   padding: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top:10px ;
+  margin-top: 10px;
 
   &:focus {
     /* outline: none; */
     outline-color: rgba(53, 91, 192, 50%);
-  /* border-color: red;
+    /* border-color: red;
   border-width: 1px; */
-
-
   }
   &:valid {
     /* background: rgba(53, 91, 192, 20%); */

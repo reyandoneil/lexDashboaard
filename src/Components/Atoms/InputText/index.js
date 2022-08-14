@@ -1,4 +1,3 @@
-import React from 'react';
 import { InputTexts } from './InputTextElements';
 import PropTypes from 'prop-types';
 function TextInput({
@@ -49,6 +48,7 @@ TextInput.propTypes = {
   id: PropTypes.any,
   defaultValue: PropTypes.any,
   maxlength: PropTypes.number,
+  required: PropTypes.bool,
 };
 
 export default TextInput;
