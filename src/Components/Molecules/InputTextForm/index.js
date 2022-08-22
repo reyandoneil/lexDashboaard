@@ -30,7 +30,6 @@ InputTextForm.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
-  onChange: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string,
   required: PropTypes.bool,

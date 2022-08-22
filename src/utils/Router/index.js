@@ -12,8 +12,9 @@ import {
   ErrorPage,
   LoginPage,
   RegisterPage,
+  HomeDashboards,
+  ProfilePage,
 } from '../../pages';
-
 
 function AppRouter() {
   return (
@@ -25,13 +26,13 @@ function AppRouter() {
           path="/dashboard/*"
           element={
             <PrivateRoute redirectTo="/login">
-              {/* <AutoLagoutTimer ComposedClass={DashboardPage} /> */}
               <DashboardPage />
             </PrivateRoute>
           }
         >
           <Route />
-          <Route path="home" element={<DashboardPage />} />
+          <Route path="home" element={<HomeDashboards />} />
+          <Route path="profile" element={<ProfilePage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/login" replace />} />

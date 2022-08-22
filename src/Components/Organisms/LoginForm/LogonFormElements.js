@@ -6,7 +6,7 @@ export const FormWrapper = styled.form`
 
 export const Space = styled.div`
   margin-bottom: 20px;
-`
+`;
 
 export const LoginFormWrapper = styled.div`
   ${(props) => {

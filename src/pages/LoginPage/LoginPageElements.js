@@ -8,6 +8,9 @@ export const Container = styled.div`
 `;
 
 export const LeftContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   ${(props) => {
     if (props.ss === 'sm' || props.ss === 'xs') {
       return `
@@ -15,9 +18,9 @@ export const LeftContainer = styled.div`
     `;
     }
   }}
-  width: 40vw;
+  width: 50vw;
   height: 100%;
-  background-color: #FCC894;
+  background-color: #fcc894;
 `;
 
 export const RightContainer = styled.div`
@@ -26,11 +29,10 @@ export const RightContainer = styled.div`
       return `
         width:100vw;
     `;
-    }else {
-      return`
+    } else {
+      return `
         width: 60vw;
-      `
-
+      `;
     }
   }}
   height: 100%;
@@ -38,3 +40,9 @@ export const RightContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const Img = styled.img`
+  width: 80%;
+`;
+
+

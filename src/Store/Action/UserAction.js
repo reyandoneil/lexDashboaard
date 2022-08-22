@@ -1,8 +1,6 @@
 import axios from 'axios';
 import {
   isLoading,
-  message,
-  setIsMessage,
 } from '../Action/GlobalAction';
 import { SET_IS_LOGIN } from './';
 const loginFakeUrl =
@@ -18,7 +16,6 @@ export const setIsLogin = (payload) => {
 export const loginUser = (email, password) => {
   return async (dispatch) => {
     const onSuccess = (dataLogin) => {
-      console.log(dataLogin,'masuk sini');
       dispatch(setIsLogin(true));
       dispatch(isLoading(false));
       localStorage.setItem(
@@ -28,14 +25,10 @@ export const loginUser = (email, password) => {
     };
     const onError = (error) => {
       dispatch(isLoading(false));
-      // dispatch(setIsMessage(true));
-      // dispatch(setStatus('500-login'));
-      // dispatch(message('invalid user/password!!!'));
     };
 
     try {
       dispatch(isLoading(true));
-      // dispatch(message(''));
       const dataLogin = await axios.post(loginFakeUrl, {
         email,
         password,

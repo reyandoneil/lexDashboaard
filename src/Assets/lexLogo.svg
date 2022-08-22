@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="549" height="107" viewBox="0 0 549 107">
+  <g id="Group_39" data-name="Group 39" transform="translate(821 -250)">
+    <circle id="Ellipse_216" data-name="Ellipse 216" cx="53.5" cy="53.5" r="53.5" transform="translate(-821 250)" fill="#fcc894"/>
+    <path id="Path_1811" data-name="Path 1811" d="M-763.055,260.585l-25.925,25.652,25.925,54.725,25.925-54.725-25.925-25.652" transform="translate(-2.979 2.726)" fill="#fff"/>
+    <path id="Path_1813" data-name="Path 1813" d="M-779.021,260.585l-9.958,9.854,9.958,21.022,9.959-21.022-9.959-9.854" transform="translate(40.021 43.933)" fill="#fff"/>
+    <path id="Path_1814" data-name="Path 1814" d="M-779.021,260.585l-9.958,9.854,9.958,21.022,9.959-21.022-9.959-9.854" transform="translate(-16.979 42.915)" fill="#fff"/>
+    <path id="Path_1812" data-name="Path 1812" d="M-767.5,263.344" fill="none" stroke="#707070" stroke-width="1"/>
+    <text id="LEX_Dashboard" data-name="LEX Dashboard" transform="translate(-690 330)" fill="#2e2c29" font-size="62" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="0" y="0">LEX</tspan><tspan y="0" xml:space="preserve" font-family="SegoeUI, Segoe UI" font-weight="400"> Dashboard</tspan></text>
+  </g>
+</svg>

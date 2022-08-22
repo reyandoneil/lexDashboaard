@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import stl from 'styled-components';
 
-export const ButtonWrapper = styled.button`
+export const ButtonWrapper = stl.button`
   cursor: pointer;
   border: none;
   margin-bottom: 20px;
@@ -24,7 +24,7 @@ export const ButtonWrapper = styled.button`
         `;
     } else {
       return `    
-        background-color: #FF9D3B;
+        background-color: #fcc894;
         height: 45px;
         width: 100%;
         display: flex;
@@ -39,7 +39,7 @@ export const ButtonWrapper = styled.button`
   }}
 `;
 
-export const ButtonTitle = styled.span`
+export const ButtonTitle = stl.span`
   ${(props) => {
     if (props.title === 'Sign in with google') {
       return `
@@ -53,7 +53,7 @@ export const ButtonTitle = styled.span`
   }}
 `;
 
-export const Icon = styled.img`
+export const Icon = stl.img`
   ${(props) => {
     if (props.name === 'default') {
       return `

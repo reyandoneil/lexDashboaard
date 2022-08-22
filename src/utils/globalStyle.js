@@ -6,7 +6,7 @@ const GlobalSyle = createGlobalStyle`
         padding: 0;
         overscroll-behavior: none;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #F5F5F5;
+        background-color: #F4F5F7;
     }
 `;
 

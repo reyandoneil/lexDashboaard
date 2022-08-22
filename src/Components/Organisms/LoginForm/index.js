@@ -1,6 +1,10 @@
 import { InputTextForm, TextContent } from '../../Molecules';
 import { Button } from '../../Atoms';
-import { FormWrapper, LoginFormWrapper,Space } from './LogonFormElements';
+import {
+  FormWrapper,
+  LoginFormWrapper,
+  Space,
+} from './LogonFormElements';
 import { loginUser } from '../../../Store/Action/UserAction';
 import { google_icon } from '../../../Assets';
 import { useSelector, useDispatch } from 'react-redux';
@@ -8,6 +12,7 @@ import { useState } from 'react';
 
 function LoginForm() {
   const dispatch = useDispatch();
+  // const [showPassword, setShowPassword] = useState(false);
   const ss = useSelector((state) => state?.globalReducer?.screenSize);
   const initialValue = {
     email: '',
@@ -24,11 +29,10 @@ function LoginForm() {
       setValues(initialValue);
     });
   };
-  console.log(values);
 
   return (
     <LoginFormWrapper ss={ss}>
-      <TextContent title={'Sign in '} />
+      <TextContent title={'Hallo again boskuh..!'} />
       <FormWrapper onSubmit={loginSubmit}>
         <InputTextForm
           id={'email'}
@@ -51,14 +55,14 @@ function LoginForm() {
           onChange={onChange}
           autoComplete={'off'}
         />
-        <Space/>
+        <Space />
         <Button title={'Login'} type={'default'} />
-        <Button
-          title={'Sign in with google'}
-          type={'icon'}
-          src={google_icon}
-        />
       </FormWrapper>
+      <Button
+        title={'Sign in with google'}
+        type={'icon'}
+        src={google_icon}
+      />
     </LoginFormWrapper>
   );
 }
