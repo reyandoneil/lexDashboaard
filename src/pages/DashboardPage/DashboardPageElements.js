@@ -38,7 +38,7 @@ export const TopMenuContainer = styled.div`
   position: sticky;
   top: 0;
   right: 0;
-  box-shadow: 10px 10px 33px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 10px 20px 10px 20px;
   height: 45px;
   max-width: 100vw;
@@ -64,7 +64,7 @@ export const ContentMenuContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 0 30px 30px 30px;
+  padding: 0 30px 30px 20px;
   max-height: 94%;
   max-width: 100%;
 `;
@@ -114,7 +114,7 @@ export const ProfileMenuWrapper = styled.div`
 `;
 
 export const ProfileMenu = styled.div`
-  box-shadow: 10px 10px 33px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   height: 160px;
   width: 150px;
   background-color: white;

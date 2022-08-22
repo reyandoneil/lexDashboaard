@@ -8,8 +8,11 @@ import close_icon from './close_icon.svg';
 import logout_icon from './logout_icon.svg';
 import profile_icon from './profile_icon.svg';
 import lexLogo from './lexLogo.svg';
+import icon from './icon.svg';
+import arrow01 from './arrow01.svg';
 
 export {
+  icon,
   google_icon,
   loader,
   img01,
@@ -20,4 +23,5 @@ export {
   logout_icon,
   profile_icon,
   lexLogo,
+  arrow01
 };

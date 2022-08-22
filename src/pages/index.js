@@ -4,6 +4,7 @@ import LoginPage from './LoginPage';
 import RegisterPage from './RegisterPage';
 import HomeDashboards from './HomeDashboard';
 import ProfilePage from './ProfilePage';
+import Networking from './Jaringan'
 
 export {
   DashboardPage,
@@ -12,4 +13,5 @@ export {
   RegisterPage,
   HomeDashboards,
   ProfilePage,
+  Networking
 };

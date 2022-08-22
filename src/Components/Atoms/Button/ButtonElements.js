@@ -19,7 +19,7 @@ export const ButtonWrapper = stl.button`
         border-style:solid;
         border-color: #E4E4E4;
         :hover{
-           box-shadow: 0px 13px 41px -5px rgba(0,0,0,0.16);
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         }
         `;
     } else {

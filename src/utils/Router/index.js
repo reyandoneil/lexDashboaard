@@ -14,6 +14,7 @@ import {
   RegisterPage,
   HomeDashboards,
   ProfilePage,
+  Networking
 } from '../../pages';
 
 function AppRouter() {
@@ -33,6 +34,7 @@ function AppRouter() {
           <Route />
           <Route path="home" element={<HomeDashboards />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="jaringan" element={<Networking />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/login" replace />} />
