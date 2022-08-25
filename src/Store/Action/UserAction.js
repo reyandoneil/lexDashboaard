@@ -1,10 +1,16 @@
 import axios from 'axios';
-import {
-  isLoading,
-} from '../Action/GlobalAction';
-import { SET_IS_LOGIN } from './';
+import { isLoading } from '../Action/GlobalAction';
+import { SET_IS_LOGIN, SET_PROFILE_MENU } from './';
 const loginFakeUrl =
   'https://dummyserver01.herokuapp.com/employe/login';
+
+export const setProfileMenu = (payload) => {
+
+  return {
+    type: SET_PROFILE_MENU,
+    payload,
+  };
+};
 
 export const setIsLogin = (payload) => {
   return {

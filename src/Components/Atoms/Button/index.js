@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
-import { ButtonWrapper, ButtonTitle, Icon } from './ButtonElements';
+import {
+  ButtonWrapper,
+  ButtonTitle,
+  Icon,
+  ListButtonWrapper,
+} from './ButtonElements';
 import { loader } from '../../../Assets';
 import { useSelector } from 'react-redux';
 
@@ -21,6 +26,12 @@ function Button({ title, type, src }) {
           <Icon src={src} />
           <ButtonTitle title={title}>{title}</ButtonTitle>
         </ButtonWrapper>
+      );
+    case 'list':
+      return (
+        <ListButtonWrapper>
+          <ButtonTitle title={title}>{title}</ButtonTitle>
+        </ListButtonWrapper>
       );
     default:
       <></>;

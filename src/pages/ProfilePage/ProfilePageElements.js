@@ -6,8 +6,8 @@ export const ProfilePageContainer = styled.div`
   }
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
-  max-width: 100vw;
+  height: 100%;
+  width: 100%;
 `;
 
 export const TextWrapper = styled.div`
@@ -15,6 +15,19 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   margin-bottom: 20px;
   margin-top: 30px;
+  ${(props) => {
+    if (props.ss === 'xs' || props.ss === 'sm') {
+      return `
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      `;
+    } else {
+      return `
+     
+      `;
+    }
+  }}
 `;
 export const Text = styled.span`
   font-size: 12px;
@@ -28,8 +41,9 @@ export const Title = styled.span`
 
 export const ProfileWrapper = styled.div`
   display: flex;
+  gap: 20px;
   max-width: 100%;
-  height: 100vh;
+  height: 100%;
   ${(props) => {
     if (props.ss === 'xs' || props.ss === 'sm') {
       return `
@@ -52,41 +66,44 @@ export const ProfileWrapper = styled.div`
 `;
 
 export const ProfileLeft = styled.div`
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  min-width: 350px;
-  height: 80%;
-  margin-bottom: 30px;
+  border-radius: 10px;
   background-color: white;
-  border-radius: 5px;
+  height: 100%;
+  width: 40%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   ${(props) => {
     if (props.ss === 'xs' || props.ss === 'sm') {
       return `
-          max-width: 100%;
-          margin-right: 0px;
-          min-height: 70%;
-          `;
+        width:100%;
+        height: 70%;
+
+      `;
     } else {
       return `
-        margin-right: 30px;
-        `;
+   
+      `;
     }
   }}
 `;
 
 export const ProfileRight = styled.div`
-  padding: 20px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  width: 100%;
-  height: 80%;
-  margin-bottom: 100px;
+  border-radius: 10px;
+  width: 60%;
   background-color: white;
-  border-radius: 5px;
+  height: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   ${(props) => {
     if (props.ss === 'xs' || props.ss === 'sm') {
       return `
-        width: 100%;
-        min-height: 70%;
-        `;
+        margin-top: 20px;
+        width:100%;
+        height: 70%;
+
+      `;
+    } else {
+      return `
+   
+      `;
     }
   }}
 `;

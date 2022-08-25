@@ -1,6 +1,6 @@
-import stl from 'styled-components';
+import styled from 'styled-components';
 
-export const ButtonWrapper = stl.button`
+export const ButtonWrapper = styled.button`
   cursor: pointer;
   border: none;
   margin-bottom: 20px;
@@ -23,7 +23,7 @@ export const ButtonWrapper = stl.button`
         }
         `;
     } else {
-      return `    
+      return `
         background-color: #fcc894;
         height: 45px;
         width: 100%;
@@ -34,12 +34,12 @@ export const ButtonWrapper = stl.button`
         :hover{
             background-color: #FC8E20
         }
-`;
+      `;
     }
   }}
 `;
 
-export const ButtonTitle = stl.span`
+export const ButtonTitle = styled.span`
   ${(props) => {
     if (props.title === 'Sign in with google') {
       return `
@@ -53,7 +53,7 @@ export const ButtonTitle = stl.span`
   }}
 `;
 
-export const Icon = stl.img`
+export const Icon = styled.img`
   ${(props) => {
     if (props.name === 'default') {
       return `
@@ -66,4 +66,20 @@ export const Icon = stl.img`
       `;
     }
   }}
+`;
+
+export const ListButtonWrapper = styled.button`
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  border: none;
+  height: 25px;
+  min-width: fit-content;
+  padding: 5px 10px 5px 10px;
+  margin-right: 20px;
+  background-color: #5121C2;
+  :hover {
+    background-color: #714dc5;
+  }
+  border-radius: 10px;
+ 
 `;

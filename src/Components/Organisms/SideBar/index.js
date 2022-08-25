@@ -16,10 +16,27 @@ const btn = [
   },
   {
     id: 2,
-    title: 'DropdownMenu',
-    path: 'dropdown',
+    title: 'Dropdown Menu',
+    path: 'dashboard',
     name: 'dropdown',
     icon: icon,
+    mlb: [
+      {
+        id: 5,
+        title: 'Dropdown 01',
+        path: 'dropdown/dropdown01',
+      },
+      {
+        id: 6,
+        title: 'Dropdown 02',
+        path: 'dropdown/dropdown02',
+      },
+      {
+        id: 7,
+        title: 'Dropdown 03',
+        path: 'dropdown/dropdown03',
+      },
+    ],
   },
   {
     id: 3,
@@ -51,6 +68,7 @@ function SideBar() {
               path={item.path}
               title={item.title}
               icon={item.icon}
+              mlb={item?.mlb}
             />
           );
         })}

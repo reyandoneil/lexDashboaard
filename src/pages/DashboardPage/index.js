@@ -1,8 +1,11 @@
-import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { logout } from '../../Store/Action/UserAction';
+import {
+  logout,
+  setProfileMenu,
+} from '../../Store/Action/UserAction';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { SideBar } from '../../Components/Organisms';
+import OutsideHandler from '../../utils/OutsideHandler';
 import {
   burger_icon,
   avatar_icon,
@@ -24,21 +27,27 @@ import {
 } from './DashboardPageElements';
 
 function Dashboard() {
+  const { ref } = OutsideHandler('profile');
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const ss = useSelector((state) => state?.globalReducer?.screenSize);
+  const isProfileMenu = useSelector(
+    (state) => state?.userReducer.isProfileMenu
+  );
 
   const logoutHandler = () => {
     dispatch(logout()).then(() => navigate('/login'));
+    dispatch(setProfileMenu(false));
   };
 
   const profileHandler = () => {
     navigate('/dashboard/profile');
+    dispatch(setProfileMenu(false));
+
   };
 
-  const [isProfileMenu, setIsProfileMenu] = useState(false);
   const openProfileMenu = () => {
-    setIsProfileMenu(!isProfileMenu);
+    dispatch(setProfileMenu(true));
   };
   return (
     <Container>
@@ -51,9 +60,10 @@ function Dashboard() {
           <Icon src={burger_icon} ss={ss} />
         </TopMenuContainer>
         {isProfileMenu && (
-          <ProfileMenu ss={ss}>
+          <ProfileMenu ss={ss} ref={ref}>
             <ProfileMenuWrapper>
               <ButtonWrapper
+                alt="profile menu"
                 src={profile_icon}
                 onClick={profileHandler}
               />
@@ -66,7 +76,7 @@ function Dashboard() {
             </LogoutWrapper>
           </ProfileMenu>
         )}
-        <Content>
+        <Content ss={ss}>
           <Outlet />
         </Content>
       </ContentContainer>

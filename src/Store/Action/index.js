@@ -4,3 +4,4 @@ export const SET_IS_LOADING = 'SET_IS_LOADING';
 
 //USER
 export const SET_IS_LOGIN = 'SET_IS_LOGIN';
+export const SET_PROFILE_MENU = 'SET_PROFILE_MENU';

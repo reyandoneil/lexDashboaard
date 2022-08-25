@@ -1,18 +1,18 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const slideRight = keyframes`
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
+// const slideRight = keyframes`
+//   from {
+//     -webkit-transform: translate3d(0, 100%, 0);
+//     transform: translate3d(0, 100%, 0);
+//     visibility: visible;
+//   }
 
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-`;
+//   to {
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+// `;
 
 export const NavLinkWrapper = styled(NavLink)`
   cursor: pointer;
@@ -96,10 +96,14 @@ export const Container = styled.div``;
 
 export const NavIcon = styled.img`
   ${(props) => {
-    if (props.className === 'arrow') {
+    if (props.className === 'arrow' ) {
       return `
       height: 30%;
     `;
+    } else if ( props.className === 'arrow2') {
+      return `
+      height: 20%;
+      `
     } else {
       return `
       height: 80%;
@@ -110,8 +114,7 @@ export const NavIcon = styled.img`
 
 export const DropdownWrapper = styled.div`
   ${(props) => {
-    console.log(props.isDropdown);
-
+  
     // if (props.isDropdown) {
     //   return `
     //   animation: ${slideRight} 0.2s forwards;

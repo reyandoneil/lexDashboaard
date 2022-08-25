@@ -21,7 +21,7 @@ export const SidebarContainer = styled.div`
         `;
     } else {
       return ` 
-        min-width: 210px;
+        max-width: 200px;
         max-height: 100%;
         z-index: 100;
       `;
@@ -64,7 +64,17 @@ export const ContentMenuContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 0 30px 30px 20px;
+  ${(props) => {
+    if (props.ss === 'xs' || props.ss === 'sm') {
+      return `
+        padding: 0 10px 20px 10px;
+      `;
+    } else{
+      return`
+        padding: 0 30px 20px 30px;
+      `
+    }
+  }}
   max-height: 94%;
   max-width: 100%;
 `;
@@ -72,7 +82,7 @@ export const Content = styled.div`
 export const AvatarIcon = styled.img`
   cursor: pointer;
   height: 35px;
-  background-color: #FCC894;
+  background-color: #fcc894;
   border-radius: 100px;
   margin-right: 20px;
 `;

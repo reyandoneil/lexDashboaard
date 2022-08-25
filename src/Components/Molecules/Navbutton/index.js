@@ -7,29 +7,12 @@ import {
   NavLinkWrapperMm,
   DropdownWrapper,
 } from './NavButtonElements';
-import { arrow01 } from '../../../Assets';
+import { arrow01, arrow02 } from '../../../Assets';
 import PropsType from 'prop-types';
-import { useSelector } from 'react-redux';
 
 const NavButton = (props) => {
-  const btn = [
-    {
-      id: 5,
-      title: 'Dropdown 01',
-      path: 'dropdown/dropdown01',
-    },
-    {
-      id: 6,
-      title: 'Dropdown 02',
-      path: 'dropdown/dropdown02',
-    },
-    {
-      id: 7,
-      title: 'Dropdown 03',
-      path: 'dropdown/dropdown03',
-    },
-  ];
-  const { path, name, title, icon } = props;
+
+  const { path, name, title, icon, mlb } = props;
   const [isDropdown, setDropdown] = useState(false);
   const dropdown = () => {
     setDropdown(!isDropdown);
@@ -41,7 +24,6 @@ const NavButton = (props) => {
           <NavLinkWrapper to={path}>
             <NavIcon src={icon} />
             <BtnWrapper>{title}</BtnWrapper>
-            
           </NavLinkWrapper>
         </Container>
       );
@@ -51,12 +33,15 @@ const NavButton = (props) => {
           <NavLinkWrapper to={path} onClick={dropdown}>
             <NavIcon src={icon} />
             <BtnWrapper>{title}</BtnWrapper>
-            <NavIcon className="arrow" src={arrow01} />
-            
+            {isDropdown ? (
+              <NavIcon className="arrow" src={arrow01} />
+            ) : (
+              <NavIcon className="arrow2" src={arrow02} />
+            )}
           </NavLinkWrapper>
           <DropdownWrapper isDropdown={isDropdown}>
             {isDropdown &&
-              btn.map((item) => {
+              mlb.map((item) => {
                 return (
                   <NavLinkWrapperMm key={item.id} to={item.path}>
                     <BtnWrapper className="dropdown">

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 //   color: red;
 // `;
 
+
 export const InputTexts = styled.input`
   color: gray;
   font-size: 0.8rem;
