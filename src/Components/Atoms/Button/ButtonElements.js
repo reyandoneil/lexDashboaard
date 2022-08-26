@@ -76,9 +76,9 @@ export const ListButtonWrapper = styled.button`
   min-width: fit-content;
   padding: 5px 10px 5px 10px;
   margin-right: 20px;
-  background-color: #5121C2;
+  background-color: #967FCC;
   :hover {
-    background-color: #714dc5;
+    background-color: #8567C9;
   }
   border-radius: 10px;
  

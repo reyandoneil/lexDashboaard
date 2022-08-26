@@ -6,18 +6,25 @@ import {
   Text,
   Title,
   TextWrapper,
+  ListBtn,
 } from './ProfilePageElements';
 import { Profile, AccountDetails } from '../../Components/Organisms';
 import { useSelector } from 'react-redux';
+import { ListButton } from '../../Components/Molecules';
 
 function ProfilePage() {
   const ss = useSelector((state) => state?.globalReducer?.screenSize);
   return (
     <ProfilePageContainer ss={ss}>
       <TextWrapper ss={ss}>
-        <Text>OVERVIEW</Text>
+        <Text ss={ss}>OVERVIEW</Text>
         <Title>User Profile</Title>
       </TextWrapper>
+      <>
+        <ListBtn>
+          <ListButton />
+        </ListBtn>
+      </>
       <ProfileWrapper ss={ss} id="profileWrapper">
         <ProfileLeft ss={ss} id="profileLeft">
           <Profile />
