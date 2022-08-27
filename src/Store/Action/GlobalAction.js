@@ -1,4 +1,8 @@
-import { SET_SCREEN_SIZE, SET_IS_LOADING } from './index';
+import {
+  SET_SCREEN_SIZE,
+  SET_IS_LOADING,
+  SET_PROFILE_CONTENT
+} from './index';
 
 export const setScreenSize = (payload) => {
   return {
@@ -13,3 +17,11 @@ export const isLoading = (payload) => {
     payload,
   };
 };
+
+export const profileContentName = (payload) => {
+  return {
+    type: SET_PROFILE_CONTENT,
+    payload
+  }
+}
+

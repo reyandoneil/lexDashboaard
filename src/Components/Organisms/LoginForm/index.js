@@ -1,4 +1,4 @@
-import { InputTextForm, TextContent } from '../../Molecules';
+import { InputTextForm, TextContent, ErrorMessage } from '../../Molecules';
 import { Button } from '../../Atoms';
 import {
   FormWrapper,
@@ -18,11 +18,15 @@ function LoginForm() {
     email: '',
     password: '',
   };
+
   const [values, setValues] = useState(initialValue);
+
+
   const onChange = (e) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
+
   const loginSubmit = (e) => {
     e.preventDefault();
     dispatch(loginUser(values.email, values.password)).then(() => {
@@ -34,12 +38,13 @@ function LoginForm() {
     <LoginFormWrapper ss={ss}>
       <TextContent title={'Hallo again boskuh..!'} />
       <FormWrapper onSubmit={loginSubmit}>
+        <ErrorMessage />
         <InputTextForm
           id={'email'}
           name={'email'}
           label={'User email'}
           type={'email'}
-          value={values['email']}
+          value={values.email}
           placeholder={'User email'}
           onChange={onChange}
           autoComplete={'off'}
@@ -50,7 +55,7 @@ function LoginForm() {
           name={'password'}
           label={'Password'}
           type={'password'}
-          value={values['password']}
+          value={values.password}
           placeholder={'Password123'}
           onChange={onChange}
           autoComplete={'off'}

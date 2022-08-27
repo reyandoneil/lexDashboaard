@@ -12,6 +12,7 @@ import icon from './icon.svg';
 import arrow01 from './arrow01.svg';
 import arrow02 from './arrow02.svg';
 import avatar from './avatar.jpg';
+import errorMessageIcon from './errorMessageIcon.svg'
 
 export {
   icon,
@@ -28,4 +29,5 @@ export {
   arrow01,
   arrow02,
   avatar,
+  errorMessageIcon
 };

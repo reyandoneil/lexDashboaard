@@ -78,7 +78,7 @@ export const ProfileLeft = styled.div`
       `;
     } else {
       return `
-      height:50%;
+      height:400px;
       `;
     }
   }}

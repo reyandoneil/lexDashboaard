@@ -8,12 +8,13 @@ import {
   TextWrapper,
   ListBtn,
 } from './ProfilePageElements';
-import { Profile, AccountDetails } from '../../Components/Organisms';
+import { Profile, AccountDetails, ProfileContent } from '../../Components/Organisms';
 import { useSelector } from 'react-redux';
 import { ListButton } from '../../Components/Molecules';
 
 function ProfilePage() {
   const ss = useSelector((state) => state?.globalReducer?.screenSize);
+
   return (
     <ProfilePageContainer ss={ss}>
       <TextWrapper ss={ss}>
@@ -33,6 +34,7 @@ function ProfilePage() {
           <AccountDetails />
         </ProfileRight>
       </ProfileWrapper>
+      <ProfileContent/>
     </ProfilePageContainer>
   );
 }

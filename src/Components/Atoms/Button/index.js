@@ -8,7 +8,7 @@ import {
 import { loader } from '../../../Assets';
 import { useSelector } from 'react-redux';
 
-function Button({ title, type, src }) {
+function Button({ title, type, src, isActive, onClick, id }) {
   const isLoading = useSelector(
     (state) => state?.globalReducer?.isLoading
   );
@@ -29,12 +29,12 @@ function Button({ title, type, src }) {
       );
     case 'list':
       return (
-        <ListButtonWrapper>
-          <ButtonTitle title={title}>{title}</ButtonTitle>
+        <ListButtonWrapper isActive={isActive} onClick={onClick}>
+          <ButtonTitle isActive={isActive} title={title}>{title}</ButtonTitle>
         </ListButtonWrapper>
       );
     default:
-      <></>;
+      return <></>;
   }
 }
 Button.propTypes = {

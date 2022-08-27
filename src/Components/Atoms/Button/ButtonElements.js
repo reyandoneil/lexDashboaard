@@ -45,6 +45,10 @@ export const ButtonTitle = styled.span`
       return `
             color: gray;
         `;
+    } else if (props.isActive === 'active') {
+      return `
+          color: balck;
+        `;
     } else {
       return `
         color: white;
@@ -69,6 +73,21 @@ export const Icon = styled.img`
 `;
 
 export const ListButtonWrapper = styled.button`
+${(props) => {
+   
+    if (props.isActive === 'active') {
+      return `
+        background-color: #fcc894;
+      `
+    } else {
+      return `
+        background-color: #967FCC;
+        :hover {
+          background-color: #8567C9;
+        }
+      `
+    }
+  }}
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   cursor: pointer;
   border: none;
@@ -76,10 +95,6 @@ export const ListButtonWrapper = styled.button`
   min-width: fit-content;
   padding: 5px 10px 5px 10px;
   margin-right: 20px;
-  background-color: #967FCC;
-  :hover {
-    background-color: #8567C9;
-  }
   border-radius: 10px;
  
 `;
