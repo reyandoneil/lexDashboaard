@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="230" viewBox="0 0 230 230">
+  <g id="Group_5" data-name="Group 5" transform="translate(-3955 1174) rotate(90)">
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="115" cy="115" r="115" transform="translate(-1174 -4185)" fill="#fff"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(-281 -53)">
+      <g id="Rectangle_7" data-name="Rectangle 7" transform="translate(-841 -4094)" fill="#fff" stroke="#707070" stroke-linecap="round" stroke-width="8">
+        <rect width="57" height="154" rx="20" stroke="none"/>
+        <rect x="4" y="4" width="49" height="146" rx="16" fill="none"/>
+      </g>
+      <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(-823 -3984)" fill="#fff" stroke="#707070" stroke-width="8">
+        <circle cx="10.5" cy="10.5" r="10.5" stroke="none"/>
+        <circle cx="10.5" cy="10.5" r="6.5" fill="none"/>
+      </g>
+      <g id="Rectangle_16" data-name="Rectangle 16" transform="translate(-823 -4073)" fill="#fff" stroke="#707070" stroke-width="8">
+        <rect width="19" height="78" rx="9.5" stroke="none"/>
+        <rect x="4" y="4" width="11" height="70" rx="5.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_6" data-name="Group 6" transform="translate(-207 -53)">
+      <g id="Rectangle_7-2" data-name="Rectangle 7" transform="translate(-841 -4094)" fill="#fff" stroke="#707070" stroke-linecap="round" stroke-width="8">
+        <rect width="57" height="154" rx="20" stroke="none"/>
+        <rect x="4" y="4" width="49" height="146" rx="16" fill="none"/>
+      </g>
+      <g id="Ellipse_11-2" data-name="Ellipse 11" transform="translate(-823 -3984)" fill="#fff" stroke="#707070" stroke-width="8">
+        <circle cx="10.5" cy="10.5" r="10.5" stroke="none"/>
+        <circle cx="10.5" cy="10.5" r="6.5" fill="none"/>
+      </g>
+      <g id="Rectangle_16-2" data-name="Rectangle 16" transform="translate(-823 -4073)" fill="#fff" stroke="#707070" stroke-width="8">
+        <rect width="19" height="78" rx="9.5" stroke="none"/>
+        <rect x="4" y="4" width="11" height="70" rx="5.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -5,21 +5,40 @@ import {
 } from './SidebarElements';
 import { lexLogo } from '../../../Assets';
 import { NavButton } from '../../Molecules';
-import { icon } from '../../../Assets';
+import {
+  icon,
+  sidebar_icon,
+  schedule_icon,
+  master_icon,
+} from '../../../Assets';
 const btn = [
   {
     id: 1,
     title: 'Dashboard',
     path: 'home',
     name: 'sidebar',
+    icon: sidebar_icon,
+  },
+  {
+    id: 2,
+    title: 'Jamaah Registration',
+    path: 'registration',
+    name: 'sidebar',
     icon: icon,
+  },
+  {
+    id: 1,
+    title: 'Schedule',
+    path: 'schedule',
+    name: 'sidebar',
+    icon: schedule_icon,
   },
   {
     id: 8,
     title: 'Master Data',
     path: 'master',
     name: 'master',
-    icon: icon,
+    icon: master_icon,
     mlb: [
       {
         id: 5,
@@ -33,7 +52,6 @@ const btn = [
       },
     ],
   },
-
 ];
 function SideBar() {
   return (

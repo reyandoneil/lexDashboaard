@@ -5,6 +5,7 @@ import RegisterPage from './RegisterPage';
 import HomeDashboards from './HomeDashboard';
 import ProfilePage from './ProfilePage';
 import Product from './Product';
+import Hotel from './Hotel';
 
 export {
   DashboardPage,
@@ -14,4 +15,5 @@ export {
   HomeDashboards,
   ProfilePage,
   Product,
+  Hotel,
 };

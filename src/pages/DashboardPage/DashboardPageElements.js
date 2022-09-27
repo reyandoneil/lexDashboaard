@@ -71,7 +71,7 @@ export const Content = styled.div`
       `;
     } else{
       return`
-        padding: 0 30px 20px 30px;
+        // padding: 0 30px 20px 30px;
       `
     }
   }}

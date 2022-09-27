@@ -15,6 +15,7 @@ import {
   HomeDashboards,
   ProfilePage,
   Product,
+  Hotel,
 } from '../../pages';
 
 function AppRouter() {
@@ -35,6 +36,7 @@ function AppRouter() {
           <Route path="home" element={<HomeDashboards />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="master/product" element={<Product />} />
+          <Route path="master/hotel" element={<Hotel />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/login" replace />} />
