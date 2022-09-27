@@ -71,7 +71,7 @@ export const BtnWrapper = styled.div`
     color: white;
   }
   ${(props) => {
-    if (props.className === 'dropdown') {
+    if (props.className === 'master') {
       return `
       margin-left: 30px;
     `;

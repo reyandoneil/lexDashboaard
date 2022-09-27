@@ -27,7 +27,7 @@ const NavButton = (props) => {
           </NavLinkWrapper>
         </Container>
       );
-    case 'dropdown':
+    case 'master':
       return (
         <Container>
           <NavLinkWrapper to={path} onClick={dropdown}>
@@ -44,7 +44,7 @@ const NavButton = (props) => {
               mlb.map((item) => {
                 return (
                   <NavLinkWrapperMm key={item.id} to={item.path}>
-                    <BtnWrapper className="dropdown">
+                    <BtnWrapper className="master">
                       {item.title}
                     </BtnWrapper>
                   </NavLinkWrapperMm>

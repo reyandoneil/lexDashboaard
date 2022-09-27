@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const AccountDetailsContainer = styled.div`
-  height: 100%;
+  height: fit-content;
   width: 100%;
+ 
 `;
 
 

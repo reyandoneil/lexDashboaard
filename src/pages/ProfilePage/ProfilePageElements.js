@@ -6,7 +6,7 @@ export const ProfilePageContainer = styled.div`
   }
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 `;
 
@@ -49,12 +49,14 @@ export const Title = styled.span`
 export const ProfileWrapper = styled.div`
   gap: 20px;
   max-width: 100%;
-  height: 100vh;
+  height: 100%;
   ${(props) => {
     if (props.ss === 'xs' || props.ss === 'sm') {
       return `
-      display: none;
-
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+        }
       `;
     } else {
       return `
@@ -90,7 +92,7 @@ export const ProfileRight = styled.div`
   border-radius: 10px;
   width: 60%;
   background-color: white;
-  height: fit-content;
+  height: 1000px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   ${(props) => {
     if (props.ss === 'xs' || props.ss === 'sm') {
@@ -122,5 +124,4 @@ export const ListBtn = styled.div`
   }
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
-
 `;

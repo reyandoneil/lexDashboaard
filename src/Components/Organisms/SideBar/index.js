@@ -15,43 +15,25 @@ const btn = [
     icon: icon,
   },
   {
-    id: 2,
-    title: 'Dropdown Menu',
-    path: 'dashboard',
-    name: 'dropdown',
+    id: 8,
+    title: 'Master Data',
+    path: 'master',
+    name: 'master',
     icon: icon,
     mlb: [
       {
         id: 5,
-        title: 'Dropdown 01',
-        path: 'dropdown/dropdown01',
+        title: 'Product',
+        path: 'master/product',
       },
       {
         id: 6,
-        title: 'Dropdown 02',
-        path: 'dropdown/dropdown02',
-      },
-      {
-        id: 7,
-        title: 'Dropdown 03',
-        path: 'dropdown/dropdown03',
+        title: 'hotel',
+        path: 'master/hotel',
       },
     ],
   },
-  {
-    id: 3,
-    title: 'Dabus',
-    path: 'dabus',
-    name: 'sidebar',
-    icon: icon,
-  },
-  {
-    id: 4,
-    title: 'Master segala master menu yang ada',
-    path: 'master',
-    name: 'sidebar',
-    icon: icon,
-  },
+
 ];
 function SideBar() {
   return (

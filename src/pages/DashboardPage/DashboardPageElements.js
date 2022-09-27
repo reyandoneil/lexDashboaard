@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const SidebarContainer = styled.div`
   ${(props) => {
-    if (props.ss === 'xxl' || props.ss === 'xl') {
+    if (props.ss === 'lg' || props.ss === 'xl' || props.ss === 'md') {
       return ` 
         width: 250px;
         max-height: 100%;
@@ -93,7 +93,7 @@ export const Icon = styled.img`
     if (props.ss === 'xs' || props.ss === 'sm') {
       return `
             display: show;
-            height: 12px;
+            height: 20px;
         `;
     } else {
       return `

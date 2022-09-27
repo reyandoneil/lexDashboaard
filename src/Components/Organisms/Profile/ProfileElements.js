@@ -38,7 +38,7 @@ export const TopWrapper = styled.div`
   align-items: center;
 `;
 export const BottomWrapper = styled.div`
-  height: 40%;
+  height:f;
   margin-top: 10px;
   height: fit-content;
   border-top-style: solid;
