@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 export const InputTexts = styled.input`
   color: gray;
-  font-size: 0.8rem;
+  font-size: 1rem;
   max-width: 100%;
   border-radius: 2px;
   border: none;

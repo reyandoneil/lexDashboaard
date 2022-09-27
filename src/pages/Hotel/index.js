@@ -1,9 +1,12 @@
-import React from 'react'
+import { SideForm } from '../../Components/Organisms';
 
 function Hotel() {
   return (
-    <div>Hotel</div>
-  )
+    <>
+    <SideForm/>
+      Hotel
+    </>
+  );
 }
 
-export default Hotel
+export default Hotel;

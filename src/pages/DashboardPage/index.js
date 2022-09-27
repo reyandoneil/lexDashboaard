@@ -43,7 +43,6 @@ function Dashboard() {
   const profileHandler = () => {
     navigate('/dashboard/profile');
     dispatch(setProfileMenu(false));
-
   };
 
   const openProfileMenu = () => {

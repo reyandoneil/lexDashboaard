@@ -69,13 +69,13 @@ export const Content = styled.div`
       return `
         padding: 0 10px 20px 10px;
       `;
-    } else{
-      return`
+    } else {
+      return `
         // padding: 0 30px 20px 30px;
-      `
+      `;
     }
   }}
-  max-height: 94%;
+  height: 94%;
   max-width: 100%;
 `;
 

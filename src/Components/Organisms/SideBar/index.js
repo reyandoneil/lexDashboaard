@@ -47,7 +47,7 @@ const btn = [
       },
       {
         id: 6,
-        title: 'hotel',
+        title: 'Hotel',
         path: 'master/hotel',
       },
     ],
