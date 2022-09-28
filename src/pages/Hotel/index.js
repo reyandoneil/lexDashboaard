@@ -1,10 +1,15 @@
 import { SideForm } from '../../Components/Organisms';
+import { TopContent, Content } from './HotelElements';
+import { useSelector } from 'react-redux';
 
 function Hotel() {
+  const ss = useSelector((state) => state?.globalReducer?.screenSize);
   return (
     <>
-    <SideForm/>
-      Hotel
+      <TopContent>
+      </TopContent>
+      <Content>content</Content>
+      <SideForm name="hotel" ss={ss} />
     </>
   );
 }

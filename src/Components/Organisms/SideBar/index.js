@@ -27,7 +27,7 @@ const btn = [
     icon: icon,
   },
   {
-    id: 1,
+    id: 3,
     title: 'Schedule',
     path: 'schedule',
     name: 'sidebar',

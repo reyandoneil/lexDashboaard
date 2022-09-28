@@ -12,9 +12,9 @@ export const ListMenuWrapper = styled.div`
   width: 100%;
   min-height: 100%;
   background-color: white;
-  border-top-width: 1px;
-  border-top-color:lightgray;
-  border-top-style: solid;
+  border-width: 1px;
+  border-color:lightgray;
+  border-style: solid;
 `;
 export const Logo = styled.img`
     height: 40%;

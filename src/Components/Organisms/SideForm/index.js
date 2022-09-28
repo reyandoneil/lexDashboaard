@@ -4,64 +4,89 @@ import {
   SideFormBackground,
   ContentSideFormWrapper,
   Text,
+  InputWrapper,
+  FormWrapper,
 } from './SideFormElements';
 import { InputTextForm } from '../../Molecules';
 import { Button } from '../../Atoms';
+import { useState } from 'react';
 
-function SideForm() {
-  return (
-    <>
-      <SideFormWrapper>
-        <SideFormBackground />
-        <ContentSideFormWrapper>
-          <TitleFormContainer>
-            <Text>Add Hotel</Text>
-          </TitleFormContainer>
-          <InputTextForm
-            id={'hotelName'}
-            name={'hotelName'}
-            label={'Hotel Name'}
-            type={'text'}
-            // value={values.email}
-            placeholder={'Hotel Name'}
-            // onChange={onChange}
-            autoComplete={'off'}
-          />
-          <InputTextForm
-            id={'hotelAddress'}
-            name={'hotelAddress'}
-            label={'Hotel Address'}
-            type={'text'}
-            // value={values.email}
-            placeholder={'Hotel Address'}
-            // onChange={onChange}
-            autoComplete={'off'}
-          />
-          <InputTextForm
-            id={'country'}
-            name={'country'}
-            label={'Country'}
-            type={'text'}
-            // value={values.email}
-            placeholder={'Country'}
-            // onChange={onChange}
-            autoComplete={'off'}
-          />
-          <InputTextForm
-            id={'Rating'}
-            name={'Rating'}
-            label={'Rating'}
-            type={'text'}
-            // value={values.email}
-            placeholder={'Rating'}
-            // onChange={onChange}
-            autoComplete={'off'}
-          />
-          <Button title={'Login'} type={'default'} />
-        </ContentSideFormWrapper>
-      </SideFormWrapper>
-    </>
-  );
+function SideForm({ name, ss }) {
+  const [hotelValues, setHotelValues] = useState({
+    hotelName: '',
+    hotelAddress: '',
+    country: '',
+    rating: '',
+  });
+  const addHotelHandler = (e) => {};
+
+  const onChangeHotelForm = (e) => {
+    const { name, value } = e.target;
+    setHotelValues({ ...hotelValues, [name]: value });
+  };
+  console.log(hotelValues);
+  switch (name) {
+    case 'hotel':
+      return (
+        <>
+          <SideFormWrapper>
+            <SideFormBackground ss={ss} />
+            <ContentSideFormWrapper ss={ss}>
+              <TitleFormContainer>
+                <Text>Tambah Hotel</Text>
+              </TitleFormContainer>
+              <FormWrapper onSubmit={addHotelHandler}>
+                <InputWrapper>
+                  <InputTextForm
+                    id={'hotelName'}
+                    name={'hotelName'}
+                    label={'Nama Hotel'}
+                    type={'text'}
+                    value={hotelValues.hotelName}
+                    placeholder={'Nama Hotel'}
+                    onChange={onChangeHotelForm}
+                    autoComplete={'off'}
+                  />
+                  <InputTextForm
+                    id={'hotelAddress'}
+                    name={'hotelAddress'}
+                    label={'Alamat Hotel'}
+                    type={'text'}
+                    value={hotelValues.hotelAddress}
+                    placeholder={'Alamat hotel'}
+                    onChange={onChangeHotelForm}
+                    autoComplete={'off'}
+                  />
+                  <InputTextForm
+                    id={'country'}
+                    name={'country'}
+                    label={'Negara'}
+                    type={'text'}
+                    value={hotelValues.country}
+                    placeholder={'Nama Negara'}
+                    onChange={onChangeHotelForm}
+                    autoComplete={'off'}
+                  />
+                  <InputTextForm
+                    id={'rating'}
+                    name={'rating'}
+                    label={'Rating'}
+                    type={'number'}
+                    value={hotelValues.rating}
+                    placeholder={'Rating'}
+                    onChange={onChangeHotelForm}
+                    autoComplete={'off'}
+                  />
+                </InputWrapper>
+                <Button title={'Simpan'} type={'default'} />
+              </FormWrapper>
+            </ContentSideFormWrapper>
+          </SideFormWrapper>
+        </>
+      );
+    default:
+      <></>;
+  }
 }
 
 export default SideForm;
