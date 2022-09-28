@@ -50,7 +50,7 @@ export const SideFormBackground = styled.div`
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 15%;
+  opacity: 55%;
 `;
 
 export const InputWrapper = styled.div`

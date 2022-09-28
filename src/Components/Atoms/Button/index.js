@@ -4,7 +4,9 @@ import {
   ButtonTitle,
   Icon,
   ListButtonWrapper,
+  ButtonAddWrapper,
 } from './ButtonElements';
+
 import { loader } from '../../../Assets';
 import { useSelector } from 'react-redux';
 
@@ -13,6 +15,13 @@ function Button({ title, type, src, isActive, onClick, id }) {
     (state) => state?.globalReducer?.isLoading
   );
   switch (type) {
+    case 'add':
+      return (
+        <ButtonAddWrapper onClick={onClick}>
+          <ButtonTitle>{title}</ButtonTitle>
+          {isLoading && <Icon src={loader} name={'default'} />}
+        </ButtonAddWrapper>
+      );
     case 'default':
       return (
         <ButtonWrapper>
@@ -30,7 +39,9 @@ function Button({ title, type, src, isActive, onClick, id }) {
     case 'list':
       return (
         <ListButtonWrapper isActive={isActive} onClick={onClick}>
-          <ButtonTitle isActive={isActive} title={title}>{title}</ButtonTitle>
+          <ButtonTitle isActive={isActive} title={title}>
+            {title}
+          </ButtonTitle>
         </ListButtonWrapper>
       );
     default:

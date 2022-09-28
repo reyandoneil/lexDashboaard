@@ -9,19 +9,25 @@ export const Container = styled.div`
 
 export const SidebarContainer = styled.div`
   ${(props) => {
-    if (props.ss === 'lg' || props.ss === 'xl' || props.ss === 'md') {
+    if (props.ss === 'xl') {
       return ` 
-        width: 250px;
+        width: 350px;
         max-height: 100%;
         z-index: 100;
       `;
+    } else if (props.ss === 'lg') {
+      return `
+        width: 300px;
+        max-height: 100%;
+        z-index: 100;
+        `;
     } else if (props.ss === 'xs' || props.ss === 'sm') {
       return `
         display:none;
         `;
     } else {
       return ` 
-        max-width: 200px;
+        max-width: 250px;
         max-height: 100%;
         z-index: 100;
       `;
@@ -34,8 +40,33 @@ export const ContentContainer = styled.div`
   height: 100%;
 `;
 
+export const ErrorMessageWrapper = styled.div`
+  ${(props) => {
+    if (props.ss === 'xs' || props.ss === 'sm') {
+      return `
+      width: 100%;
+    `;
+    } else {
+      return `
+      width: 30%;
+      `;
+    }
+  }}
+  color: white;
+  background-color: #ff9c9c;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 1rem;
+`;
+
 export const TopMenuContainer = styled.div`
   position: sticky;
+
   top: 0;
   right: 0;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

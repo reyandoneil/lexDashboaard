@@ -73,19 +73,18 @@ export const Icon = styled.img`
 `;
 
 export const ListButtonWrapper = styled.button`
-${(props) => {
-   
+  ${(props) => {
     if (props.isActive === 'active') {
       return `
         background-color: #fcc894;
-      `
+      `;
     } else {
       return `
         background-color: #967FCC;
         :hover {
           background-color: #8567C9;
         }
-      `
+      `;
     }
   }}
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -96,5 +95,21 @@ ${(props) => {
   padding: 5px 10px 5px 10px;
   margin-right: 20px;
   border-radius: 10px;
- 
+`;
+
+export const ButtonAddWrapper = styled.button`
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  background-color: #967FCC;
+  padding: 10px;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+;
+  :hover {
+    background-color: #8567C9;;
+  }
 `;

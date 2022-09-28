@@ -1,17 +1,21 @@
 import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { setProfileMenu } from '../../Store/Action/UserAction';
+import { setIsAddHotel } from '../../Store/Action/HotelAction';
 export default function OutsideHandler(name) {
   const ref = useRef(null);
   const dispatch = useDispatch();
   const handleClick = (e) => {
-    if (ref?.current?.contains(e?.target) ) {
+    if (ref?.current?.contains(e?.target)) {
       // inside click
       return;
-    } 
+    }
     switch (name) {
       case 'profile':
         dispatch(setProfileMenu(false));
+        break;
+      case 'hotel':
+        dispatch(setIsAddHotel(false));
         break;
       default:
         break;

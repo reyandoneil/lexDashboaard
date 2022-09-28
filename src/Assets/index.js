@@ -15,7 +15,7 @@ import errorMessageIcon from './errorMessageIcon.svg';
 import sidebar_icon from './sidebar_icon/dashboard_icon.svg';
 import schedule_icon from './sidebar_icon/schedule_icon.svg';
 import master_icon from './sidebar_icon/master_icon.svg';
-
+import error404 from './error404.svg';
 
 export {
   icon,
@@ -34,5 +34,6 @@ export {
   errorMessageIcon,
   sidebar_icon,
   schedule_icon,
-  master_icon
+  master_icon,
+  error404,
 };

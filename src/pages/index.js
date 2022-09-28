@@ -6,6 +6,8 @@ import HomeDashboards from './HomeDashboard';
 import ProfilePage from './ProfilePage';
 import Product from './Product';
 import Hotel from './Hotel';
+import Master from './Master';
+import Schedule from './Schedule';
 
 export {
   DashboardPage,
@@ -16,4 +18,6 @@ export {
   ProfilePage,
   Product,
   Hotel,
+  Master,
+  Schedule,
 };

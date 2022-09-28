@@ -16,6 +16,8 @@ import {
   ProfilePage,
   Product,
   Hotel,
+  Master,
+  Schedule,
 } from '../../pages';
 
 function AppRouter() {
@@ -35,6 +37,8 @@ function AppRouter() {
           <Route />
           <Route path="home" element={<HomeDashboards />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="master" element={<Master />} />
+          <Route path="schedule" element={<Schedule />} />
           <Route path="master/product" element={<Product />} />
           <Route path="master/hotel" element={<Hotel />} />
           <Route path="*" element={<ErrorPage />} />

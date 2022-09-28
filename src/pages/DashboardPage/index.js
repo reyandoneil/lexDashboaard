@@ -24,6 +24,7 @@ import {
   LogoutWrapper,
   ProfileMenuWrapper,
   ButtonWrapper,
+  ErrorMessageWrapper,
 } from './DashboardPageElements';
 
 function Dashboard() {
@@ -54,6 +55,9 @@ function Dashboard() {
         <SideBar />
       </SidebarContainer>
       <ContentContainer>
+        <ErrorMessageWrapper ss={ss}>
+          Ini Error Messagenya...
+        </ErrorMessageWrapper>
         <TopMenuContainer ss={ss}>
           <AvatarIcon src={avatar_icon} onClick={openProfileMenu} />
           <Icon src={burger_icon} ss={ss} />
