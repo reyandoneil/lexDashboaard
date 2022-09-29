@@ -10,6 +10,7 @@ import Password from './Password';
 import ProfileContent from './ProfileContent';
 import Modal from './Modal';
 import SideForm from './SideForm';
+import List from './List'
 
 export {
   LoginForm,
@@ -24,4 +25,5 @@ export {
   ProfileContent,
   Modal,
   SideForm,
+  List
 };

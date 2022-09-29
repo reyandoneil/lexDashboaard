@@ -1,20 +1,34 @@
-import { SideForm } from '../../Components/Organisms';
+import { SideForm, List } from '../../Components/Organisms';
 import { TopContent, Content } from './ProductElements';
 import { Button } from '../../Components/Atoms';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsAddHotel } from '../../Store/Action/HotelAction';
+import { useEffect } from 'react';
+import { getAllProductByCompanyId } from '../../Store/Action/ProductAction'
 
 
 function Product() {
-  
   const dispatch = useDispatch();
+
   const isAddHotel = useSelector(
     (state) => state?.hotelReducer?.isAddHotel
   );
+  //GET ALL DATA PRODUCT FROM REDUCER
+  const dataProduct = useSelector(
+    (state) => state?.productReducer?.dataProduct
+  );
+
   const ss = useSelector((state) => state?.globalReducer?.screenSize);
   const openSideForm = () => {
     dispatch(setIsAddHotel(true));
   };
+
+  //GETALLPRODUCT
+  useEffect(() => {
+    dispatch(getAllProductByCompanyId(1))
+  }, [dispatch])
+
+  console.log(dataProduct);
 
   return (
     <>
@@ -25,7 +39,9 @@ function Product() {
           onClick={openSideForm}
         />
       </TopContent>
-      <Content>content</Content>
+      <Content>
+        <List data={dataProduct} />
+      </Content>
       {isAddHotel && <SideForm name="product" ss={ss} />}
     </>
   );
