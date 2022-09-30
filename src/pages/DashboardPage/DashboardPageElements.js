@@ -107,7 +107,7 @@ export const Content = styled.div`
     }
   }}
   height: 94%;
-  max-width: 100%;
+  width: 97%;
 `;
 
 export const AvatarIcon = styled.img`
