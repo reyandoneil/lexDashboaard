@@ -36,6 +36,13 @@ function Button({ title, type, src, isActive, onClick, id }) {
           <ButtonTitle title={title}>{title}</ButtonTitle>
         </ButtonWrapper>
       );
+      case 'action':
+        return (
+          <ButtonWrapper title={title}>
+            <Icon src={src} />
+            {/* <ButtonTitle title={title}>{title}</ButtonTitle> */}
+          </ButtonWrapper>
+        );
     case 'list':
       return (
         <ListButtonWrapper isActive={isActive} onClick={onClick}>

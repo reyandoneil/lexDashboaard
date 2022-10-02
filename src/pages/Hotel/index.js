@@ -3,10 +3,10 @@ import { TopContent, Content } from './HotelElements';
 import { Button } from '../../Components/Atoms';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsAddHotel } from '../../Store/Action/HotelAction';
-
+import { ListCard } from '../../Components/Organisms'
 
 function Hotel() {
-  
+
   const dispatch = useDispatch();
   const isAddHotel = useSelector(
     (state) => state?.hotelReducer?.isAddHotel
@@ -25,7 +25,9 @@ function Hotel() {
           onClick={openSideForm}
         />
       </TopContent>
-      <Content>content</Content>
+      <Content>
+        <ListCard />
+      </Content>
       {isAddHotel && <SideForm name="hotel" ss={ss} />}
     </>
   );

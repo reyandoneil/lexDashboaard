@@ -8,7 +8,7 @@ import {useSelector} from 'react-redux'
 
 function ProfileContent() {
     const name = useSelector((state) => state?.globalReducer?.profileContentName)
-    console.log(name);
+    
     switch (name) {
         case 'Basic Information':
             return (

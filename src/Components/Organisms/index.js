@@ -11,6 +11,7 @@ import ProfileContent from './ProfileContent';
 import Modal from './Modal';
 import SideForm from './SideForm';
 import List from './List'
+import ListCard from './ListCard'
 
 export {
   LoginForm,
@@ -25,5 +26,6 @@ export {
   ProfileContent,
   Modal,
   SideForm,
-  List
+  List,
+  ListCard
 };

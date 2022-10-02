@@ -28,8 +28,6 @@ function Product() {
     dispatch(getAllProductByCompanyId(1))
   }, [dispatch])
 
-  console.log(dataProduct);
-
   return (
     <>
       <TopContent>

@@ -98,16 +98,15 @@ export const Content = styled.div`
   ${(props) => {
     if (props.ss === 'xs' || props.ss === 'sm') {
       return `
-        padding: 0 10px 20px 10px;
       `;
     } else {
       return `
-        // padding: 0 30px 20px 30px;
+  
       `;
     }
   }}
-  height: 94%;
-  width: 97%;
+  height: 100vh;
+  max-width: 100%;
 `;
 
 export const AvatarIcon = styled.img`
@@ -181,3 +180,5 @@ export const ButtonWrapper = styled.img`
   :hover {
   }
 `;
+
+
