@@ -64,6 +64,7 @@ export const NavLinkWrapperMm = styled(NavLink)`
 `;
 
 export const BtnWrapper = styled.div`
+  font-size: 1.2rem;
   &:hover {
     color: white;
   }
@@ -106,7 +107,7 @@ export const NavIcon = styled.img`
       `
     } else {
       return `
-      height: 80%;
+      height: 90%;
       `;
     }
   }}

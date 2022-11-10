@@ -8,8 +8,8 @@ import styled from 'styled-components';
 
 
 export const InputTexts = styled.input`
-  color: gray;
-  font-size: 1rem;
+  color: black;
+  font-size: 1.2rem;
   max-width: 100%;
   border-radius: 2px;
   border: none;

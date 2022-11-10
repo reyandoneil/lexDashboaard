@@ -9,6 +9,7 @@ function InputTextForm({
   onChange,
   label,
   id,
+  value,
   autoComplete,
 }) {
   return (
@@ -21,6 +22,7 @@ function InputTextForm({
         onChange={onChange}
         id={id}
         autoComplete={autoComplete}
+        value={value}
       />
     </InputTextFormWrapper>
   );

@@ -4,14 +4,16 @@ import {
     BottomCardWrapper,
     HotelName,
     Star,
-    Address
+    Address,
+    Img
 } from './ListCardElements'
+import {hotel1} from '../../../Assets'
 
 function ListCard() {
     return (
         <CardWrapper>
             <TopCardWrapper>
-
+                <Img src={hotel1} alt={'imgHotel'}/>
             </TopCardWrapper>
             <BottomCardWrapper>
                 <HotelName>

@@ -8,10 +8,12 @@ import AccountData from './AccountData';
 import FinanceData from './FinanceData';
 import Password from './Password';
 import ProfileContent from './ProfileContent';
-import Modal from './Modal';
+import EditModal from './EditModal';
 import SideForm from './SideForm';
 import List from './List'
 import ListCard from './ListCard'
+import Alert from './Alert';
+import Form from './Forms'
 
 export {
   LoginForm,
@@ -24,8 +26,10 @@ export {
   FinanceData,
   Password,
   ProfileContent,
-  Modal,
+  EditModal,
   SideForm,
   List,
-  ListCard
+  ListCard,
+  Alert,
+  Form
 };

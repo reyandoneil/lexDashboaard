@@ -1,8 +1,9 @@
+import { useEffect } from 'react'
 import { SideForm } from '../../Components/Organisms';
 import { TopContent, Content } from './HotelElements';
 import { Button } from '../../Components/Atoms';
 import { useDispatch, useSelector } from 'react-redux';
-import { setIsAddHotel } from '../../Store/Action/HotelAction';
+import { setIsAddHotel, getAllHotel } from '../../Store/Action/HotelAction';
 import { ListCard } from '../../Components/Organisms'
 
 function Hotel() {
@@ -15,6 +16,11 @@ function Hotel() {
   const openSideForm = () => {
     dispatch(setIsAddHotel(true));
   };
+
+  useEffect(() => {
+    dispatch(getAllHotel)
+  }, [dispatch])
+
 
   return (
     <>

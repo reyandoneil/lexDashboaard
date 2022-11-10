@@ -10,7 +10,7 @@ import { getAllProductByCompanyId } from '../../Store/Action/ProductAction'
 function Product() {
   const dispatch = useDispatch();
 
-  const isAddHotel = useSelector(
+  const isAddProduct = useSelector(
     (state) => state?.hotelReducer?.isAddHotel
   );
   //GET ALL DATA PRODUCT FROM REDUCER
@@ -37,10 +37,10 @@ function Product() {
           onClick={openSideForm}
         />
       </TopContent>
-      <Content>
+      <Content ss={ss}>
         <List data={dataProduct} />
       </Content>
-      {isAddHotel && <SideForm name="product" ss={ss} />}
+      {isAddProduct && <SideForm name="product" ss={ss} />}
     </>
   );
 }

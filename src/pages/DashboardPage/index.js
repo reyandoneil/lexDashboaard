@@ -32,9 +32,13 @@ function Dashboard() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const ss = useSelector((state) => state?.globalReducer?.screenSize);
+
   const isProfileMenu = useSelector(
     (state) => state?.userReducer.isProfileMenu
   );
+
+  const isMessage = useSelector((state) => state?.globalReducer?.isMessage)
+  const message = useSelector((state) => state?.globalReducer?.message)
 
   const logoutHandler = () => {
     dispatch(logout()).then(() => navigate('/login'));
@@ -55,9 +59,11 @@ function Dashboard() {
         <SideBar />
       </SidebarContainer>
       <ContentContainer>
-        <ErrorMessageWrapper ss={ss}>
-          Ini Error Messagenya...
-        </ErrorMessageWrapper>
+        {isMessage && (
+          <ErrorMessageWrapper ss={ss} status={message.status}>
+            {message.msg}
+          </ErrorMessageWrapper>
+        )}
         <TopMenuContainer ss={ss}>
           <AvatarIcon src={avatar_icon} onClick={openProfileMenu} />
           <Icon src={burger_icon} ss={ss} />

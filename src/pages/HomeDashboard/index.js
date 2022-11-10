@@ -1,8 +1,12 @@
-import React from 'react'
+import {Content} from './HomeDashboardElements'
 
 function HomeDashboard() {
   return (
-    <div>HomeDashboard</div>
+    <>
+    <Content>
+    HomeDashboard
+    </Content>
+    </>
   )
 }
 

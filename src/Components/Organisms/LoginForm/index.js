@@ -61,7 +61,7 @@ function LoginForm() {
           autoComplete={'off'}
         />
         <Space />
-        <Button title={'Login'} type={'default'} />
+        <Button title={'Login'} type={'default'} disabled/>
       </FormWrapper>
       <Button
         title={'Sign in with google'}

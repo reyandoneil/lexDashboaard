@@ -7,7 +7,21 @@ export const TopContent = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 100vh;
-  max-width: 100%;
+  ${props => {
+  if(props.ss === 'xl') {
+    return`
+      width: 97%;
+    `
+  }else if(props.ss === 'lg'){
+    return`
+      width: 97%;
+    `
+  }
+}}
+  height: 75vh;
   padding: 20px;
+  overflow-y: auto;
+&::-webkit-scrollbar {
+    display: none;
+}
 `;

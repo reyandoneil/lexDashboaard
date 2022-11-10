@@ -5,6 +5,7 @@ import {
   Icon,
   ListButtonWrapper,
   ButtonAddWrapper,
+  ButtonCancelWrapper
 } from './ButtonElements';
 
 import { loader } from '../../../Assets';
@@ -17,17 +18,24 @@ function Button({ title, type, src, isActive, onClick, id }) {
   switch (type) {
     case 'add':
       return (
-        <ButtonAddWrapper onClick={onClick}>
+        <ButtonAddWrapper onClick={onClick} disabled={isLoading}>
           <ButtonTitle>{title}</ButtonTitle>
-          {isLoading && <Icon src={loader} name={'default'} />}
+          {/* {isLoading && <Icon src={loader} name={'default'} />} */}
         </ButtonAddWrapper>
       );
     case 'default':
       return (
-        <ButtonWrapper>
+        <ButtonWrapper disabled={isLoading} onClick={onClick}>
           <ButtonTitle>{title}</ButtonTitle>
           {isLoading && <Icon src={loader} name={'default'} />}
         </ButtonWrapper>
+      );
+    case 'cancel':
+      return (
+        <ButtonCancelWrapper disabled={isLoading} onClick={onClick}>
+          <ButtonTitle>{title}</ButtonTitle>
+            {isLoading && <Icon src={loader} name={'default'} />}
+          </ButtonCancelWrapper>
       );
     case 'icon':
       return (
@@ -36,13 +44,13 @@ function Button({ title, type, src, isActive, onClick, id }) {
           <ButtonTitle title={title}>{title}</ButtonTitle>
         </ButtonWrapper>
       );
-      case 'action':
-        return (
-          <ButtonWrapper title={title}>
-            <Icon src={src} />
-            {/* <ButtonTitle title={title}>{title}</ButtonTitle> */}
-          </ButtonWrapper>
-        );
+    case 'action':
+      return (
+        <ButtonWrapper title={title}>
+          <Icon src={src} />
+          {/* <ButtonTitle title={title}>{title}</ButtonTitle> */}
+        </ButtonWrapper>
+      );
     case 'list':
       return (
         <ListButtonWrapper isActive={isActive} onClick={onClick}>

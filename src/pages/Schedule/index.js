@@ -1,32 +1,37 @@
-import { SideForm } from '../../Components/Organisms';
-import { TopContent, Content } from './ScheduleElements';
-import { Button } from '../../Components/Atoms';
-import { useDispatch, useSelector } from 'react-redux';
-import { setIsAddHotel } from '../../Store/Action/HotelAction';
+import { Form } from "../../Components/Organisms";
+import { TopContent, Content,ListScheduleWrapper, DetailScheduleWrapper } from "./ScheduleElements";
+import { Button } from "../../Components/Atoms";
+import { useDispatch, useSelector } from "react-redux";
+import { isScheduleForm } from "../../Store/Action/ScheduleAction";
 
-function Hotel() {
+
+function Schedule() {
   const dispatch = useDispatch();
-  const isAddHotel = useSelector(
-    (state) => state?.hotelReducer?.isAddHotel
-  );
+  const isForm = useSelector((state) => state?.scheduleReducer?.isScheduleForm);
   const ss = useSelector((state) => state?.globalReducer?.screenSize);
-  const openSideForm = () => {
-    dispatch(setIsAddHotel(true));
+  const openForm = () => {
+    dispatch(isScheduleForm(true));
   };
-
   return (
     <>
+      {isForm && <Form />}
       <TopContent>
         <Button
-          type={'add'}
-          title={'Tambah Jadwal Pemberangkatan'}
-          onClick={openSideForm}
+          type={"add"}
+          title={"Tambah Jadwal Pemberangkatan"}
+          onClick={openForm}
         />
       </TopContent>
-      <Content>content</Content>
-      {isAddHotel && <SideForm name="schedule" ss={ss} />}
+      <Content ss={ss}>
+        <ListScheduleWrapper>
+          List Schedule
+        </ListScheduleWrapper>
+        <DetailScheduleWrapper>
+          Detail
+        </DetailScheduleWrapper>
+      </Content>
     </>
   );
 }
 
-export default Hotel;
+export default Schedule;

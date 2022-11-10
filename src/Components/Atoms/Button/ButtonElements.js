@@ -24,7 +24,7 @@ export const ButtonWrapper = styled.button`
         `;
     } else {
       return `
-        background-color: #fcc894;
+        background-color: #967FCC;
         height: 45px;
         width: 100%;
         display: flex;
@@ -32,14 +32,35 @@ export const ButtonWrapper = styled.button`
         align-items: center;
         border-radius: 2px;
         :hover{
-            background-color: #FC8E20
+            background-color: #8567C9
         }
       `;
     }
   }}
 `;
 
+export const ButtonCancelWrapper = styled.button`
+  cursor: pointer;
+  border: none;
+  background-color: #FF9C9C;
+  padding: 10px;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+;
+  :hover {
+    background-color: #FF9C9C;
+  }
+`;
+
 export const ButtonTitle = styled.span`
+font-size: 1rem ;
+:focus{
+  color: white ;
+}
   ${(props) => {
     if (props.title === 'Sign in with google') {
       return `
@@ -108,9 +129,10 @@ export const ButtonAddWrapper = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 ;
   :hover {
-    background-color: #8567C9;;
+    background-color: #8567C9;
   }
 `;
 

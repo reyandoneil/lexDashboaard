@@ -1,7 +1,18 @@
 import styled from "styled-components";
 
 export const ErrorMessageWrapper = styled.div`
-    background-color: #FF9C9C;
+${(props) => {
+        if (props.msgStatus === 'error') {
+            return `
+        background-color: #FF9C9C;
+        `
+        } else {
+            return `
+        background-color: #8567C9;
+        `
+        }
+    }}
+
     height: 100% ;
     max-width: 100% ;
     display: flex ;

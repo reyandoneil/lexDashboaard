@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.div`
+border-radius: 10px ;
     width: 330px ;
     height: 400px ;
     background-color: white ;
@@ -11,7 +12,6 @@ export const CardWrapper = styled.div`
 export const TopCardWrapper = styled.div`
     width:100% ;
     height:50% ;
-    background-color:yellow ;
 `
 export const BottomCardWrapper = styled.div`
     padding:10px ;
@@ -23,4 +23,10 @@ export const Star = styled.div`
 `
 
 export const Address = styled.div`
+`
+
+export const Img = styled.img`
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
 `

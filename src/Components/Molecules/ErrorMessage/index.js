@@ -7,10 +7,12 @@ import {
     // Title
 } from './ErrorMessageElements'
 import { errorMessageIcon } from '../../../Assets'
+import { useSelector } from 'react-redux'
 
 function ErrorMessage() {
+    const msg = useSelector((state) => state?.globalReducer?.message)
     return (
-        <ErrorMessageWrapper>
+        <ErrorMessageWrapper msgStatus={msg}>
             <ErrorIconWrapper>
                 <ErrorIcon src={errorMessageIcon} />
             </ErrorIconWrapper>
@@ -19,7 +21,7 @@ function ErrorMessage() {
                     Error
                 </Title> */}
                 <Message>
-                    this is error message
+                    {msg}
                 </Message>
             </MessageWrapper>
         </ErrorMessageWrapper>

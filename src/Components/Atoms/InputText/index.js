@@ -13,12 +13,16 @@ function TextInput({
   defaultValue,
   maxlength,
   min,
+  defaultChecked,
+  checked,
   ...inputProps
 }) {
   return (
     <>
       <InputTexts
         {...inputProps}
+        defaultChecked={defaultChecked}
+        checked={checked}
         type={type}
         placeholder={placeholder}
         onChange={onChange}

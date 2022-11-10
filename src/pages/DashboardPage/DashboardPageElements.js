@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
@@ -9,19 +9,19 @@ export const Container = styled.div`
 
 export const SidebarContainer = styled.div`
   ${(props) => {
-    if (props.ss === 'xl') {
+    if (props.ss === "xl") {
       return ` 
         width: 350px;
         max-height: 100%;
         z-index: 100;
       `;
-    } else if (props.ss === 'lg') {
+    } else if (props.ss === "lg") {
       return `
         width: 300px;
         max-height: 100%;
         z-index: 100;
         `;
-    } else if (props.ss === 'xs' || props.ss === 'sm') {
+    } else if (props.ss === "xs" || props.ss === "sm") {
       return `
         display:none;
         `;
@@ -42,7 +42,7 @@ export const ContentContainer = styled.div`
 
 export const ErrorMessageWrapper = styled.div`
   ${(props) => {
-    if (props.ss === 'xs' || props.ss === 'sm') {
+    if (props.ss === "xs" || props.ss === "sm") {
       return `
       width: 100%;
     `;
@@ -52,16 +52,27 @@ export const ErrorMessageWrapper = styled.div`
       `;
     }
   }}
+  ${(props) => {
+    if (props.status === "error") {
+      return `
+      background-color: #ff9c9c;
+      `;
+    } else {
+      return `
+      background-color: #8567C9;
+      `;
+    }
+  }}
   color: white;
-  background-color: #ff9c9c;
   height: 45px;
   position: fixed;
   top: 0;
   z-index: 3;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 1.1rem;
 `;
 
 export const TopMenuContainer = styled.div`
@@ -77,7 +88,7 @@ export const TopMenuContainer = styled.div`
   display: flex;
   align-items: center;
   ${(props) => {
-    if (props.ss === 'xs' || props.ss === 'sm') {
+    if (props.ss === "xs" || props.ss === "sm") {
       return `
           justify-content: space-between;
             
@@ -96,7 +107,7 @@ export const ContentMenuContainer = styled.div`
 
 export const Content = styled.div`
   ${(props) => {
-    if (props.ss === 'xs' || props.ss === 'sm') {
+    if (props.ss === "xs" || props.ss === "sm") {
       return `
       `;
     } else {
@@ -106,7 +117,7 @@ export const Content = styled.div`
     }
   }}
   height: 100vh;
-  max-width: 100%;
+  width: 100%;
 `;
 
 export const AvatarIcon = styled.img`
@@ -120,7 +131,7 @@ export const AvatarIcon = styled.img`
 export const Icon = styled.img`
   cursor: pointer;
   ${(props) => {
-    if (props.ss === 'xs' || props.ss === 'sm') {
+    if (props.ss === "xs" || props.ss === "sm") {
       return `
             display: show;
             height: 20px;
@@ -161,7 +172,7 @@ export const ProfileMenu = styled.div`
   position: absolute;
   padding: 10px;
   ${(props) => {
-    if (props.ss === 'xs' || props.ss === 'sm') {
+    if (props.ss === "xs" || props.ss === "sm") {
       return `
         left: 0px;
           `;
@@ -180,5 +191,3 @@ export const ButtonWrapper = styled.img`
   :hover {
   }
 `;
-
-

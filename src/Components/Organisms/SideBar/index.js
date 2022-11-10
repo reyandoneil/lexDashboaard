@@ -3,7 +3,7 @@ import {
   ListMenuWrapper,
   Logo,
 } from './SidebarElements';
-import { lexLogo } from '../../../Assets';
+import { sahabatLogo } from '../../../Assets';
 import { NavButton } from '../../Molecules';
 import {
   icon,
@@ -21,28 +21,28 @@ const btn = [
   },
   {
     id: 2,
-    title: 'Jamaah Registration',
+    title: 'Registrasi Jamaah',
     path: 'registration',
     name: 'sidebar',
     icon: icon,
   },
   {
     id: 3,
-    title: 'Schedule',
+    title: 'Jadwal Keberangkatan',
     path: 'schedule',
     name: 'sidebar',
     icon: schedule_icon,
   },
   {
     id: 8,
-    title: 'Master Data',
+    title: 'Data Master',
     path: 'master',
     name: 'master',
     icon: master_icon,
     mlb: [
       {
         id: 5,
-        title: 'Product',
+        title: 'Produk',
         path: 'master/product',
       },
       {
@@ -57,7 +57,7 @@ function SideBar() {
   return (
     <>
       <LogoWrapper>
-        <Logo src={lexLogo} />
+        <Logo src={sahabatLogo} />
       </LogoWrapper>
       <ListMenuWrapper>
         {btn.map((item) => {

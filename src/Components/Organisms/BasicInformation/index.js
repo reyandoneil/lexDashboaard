@@ -11,6 +11,10 @@ import {
 function BasicInformation() {
   const [basicInformationFormValue, setBasicInformationFormValue] =
     useState();
+
+  const onChange = () => {
+    setBasicInformationFormValue()
+  }
   return (
     <>
       <BasicInformationContainer>
@@ -25,7 +29,7 @@ function BasicInformation() {
             type={'namaPenjamin'}
             value={basicInformationFormValue}
             placeholder={'Nama Penjamin'}
-            // onChange={onChange}
+            onChange={onChange}
             autoComplete={'off'}
           />
           <InputTextForm

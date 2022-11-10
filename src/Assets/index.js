@@ -16,6 +16,8 @@ import sidebar_icon from './sidebar_icon/dashboard_icon.svg';
 import schedule_icon from './sidebar_icon/schedule_icon.svg';
 import master_icon from './sidebar_icon/master_icon.svg';
 import error404 from './error404.svg';
+import hotel1 from './exterior-view.png';
+import sahabatLogo from './sahabatLogo.svg'
 
 export {
   icon,
@@ -36,4 +38,6 @@ export {
   schedule_icon,
   master_icon,
   error404,
+  hotel1,
+  sahabatLogo
 };
